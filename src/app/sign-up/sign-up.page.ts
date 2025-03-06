@@ -61,7 +61,9 @@ export class SignUpPage implements OnInit {
 
   onSignup() {
     this.router.navigateByUrl("login")
+
   }
+
 
 
 }

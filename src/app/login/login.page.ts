@@ -39,7 +39,7 @@ export class LoginPage implements OnInit {
         buttons: ['OK'],
       });
       await alert.present();
-      this.router.navigateByUrl('login');
+      this.router.navigateByUrl('home');
 
 
     } catch (error) {
@@ -60,10 +60,10 @@ export class LoginPage implements OnInit {
   }
 
   onSignup() {
-    this.router.navigateByUrl("sing-up")
+    this.router.navigateByUrl("sign-up")
   }
 
   onReset() {
-    this.router.navigateByUrl("reset-password")
+    this.router.navigateByUrl("forgot-password")
   }
 }
