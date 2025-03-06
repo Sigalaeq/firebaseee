@@ -10,17 +10,16 @@
   <form (ngSubmit)="onSubmit()" #registerForm="ngForm">
     <div class="mb-6">
       <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email adress</label>
-      <input type="email" id="email" name="email" [(ngModel)]="email"
+      <input type="email" id="email" name="email" [(ngModel)]="emailInput"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 blockw-full"
-        placeholder="john.doe@company.com" required #emailInput="ngModel" />
-      <div *ngIf="emailInput.invalid && emailInput.touched" style="color: red;">Please enter a valid email address.
-      </div>
+        placeholder="john.doe@company.com" required #email="ngModel" />
+
     </div>
     <div class="mb-6">
       <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">password</label>
-      <input type="password" id="password" name="password" [(ngModel)]="password"
+      <input type="password" id="password" name="password" [(ngModel)]="passwordInput"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 blockw-full"
-        placeholder="********" required #passwordInput="ngModel" />
+        placeholder="********" required #password="ngModel" />
     </div>
 
     <button type="submit"

@@ -20,8 +20,8 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
   }
-  email: string = '';
-  password: string = '';
+  emailInput: string = '';
+  passwordInput: string = '';
 
   constructor(private authService: AuthService,
     private alertController: AlertController,
@@ -32,10 +32,10 @@ export class LoginPage implements OnInit {
 
   async onSubmit() {
     try {
-      await this.authService.login(this.email, this.password);
+      await this.authService.login(this.emailInput, this.passwordInput);
       const alert = await this.alertController.create({
         header: 'Success',
-        message: 'Your account has been created',
+        message: 'You have logged in successfully',
         buttons: ['OK'],
       });
       await alert.present();
